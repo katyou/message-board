@@ -1,0 +1,8 @@
+<%= form_for(@message) do |f| %>
+  <% if @message.errors.present? %>
+    <div class="alert alert-danger">
+        <%= alert %>
+        <ul>
+            <% @messageerrors.full_messages.each do |full_message| %>
+        </ul>
+    </div>
