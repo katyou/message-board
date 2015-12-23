@@ -2,6 +2,7 @@
     <div class = "panel-heading">
         メッセージ一覧
     </div>
+    
     <div class="panel-body">
         <% @messages.each do |message| %>
           <span class="label label-info"><%= message.name %></span>
@@ -10,6 +11,10 @@
         <% end %>
     </div>
 </div>
+
+
+<% #部分テンプレートを読み込んでいる %>
+<%= render 'form' %>
 
 <%= form_for(@message, html: {class: "form-horizontal"}) do |f| %>
   <% if @message.errors.present? %>

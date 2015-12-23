@@ -3,6 +3,19 @@
     <div class="alert alert-danger">
         <%= alert %>
         <ul>
-            <% @messageerrors.full_messages.each do |full_message| %>
+            <% @message.errors.full_messages.each do |full_message| %>
+            <li>
+                <%= full_message %>
+            </li>
+            <% end %>
         </ul>
     </div>
+  <% end %>
+  
+  名前:
+  <%= f.text_field :name %>
+  
+  内容:
+  <%= f.text_field :body %>
+  <%= f.submit class: "btn btn-sm btn-primary" %>
+ <% end %>
